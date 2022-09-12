@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>数组</title>
+    <link href="/2022/09/12/%E6%95%B0%E7%BB%84/"/>
+    <url>/2022/09/12/%E6%95%B0%E7%BB%84/</url>
+    
+    <content type="html"><![CDATA[<h1 id="209-长度最小的子数组"><a href="#209-长度最小的子数组" class="headerlink" title="209.长度最小的子数组"></a>209.长度最小的子数组</h1><p>给定一个含有 n 个正整数的数组和一个正整数 target 。</p><p>找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, …, numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。</p><p>示例1：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：target = 7, nums = [2,3,1,2,4,3]<br>输出：2<br>解释：子数组 [4,3] 是该条件下的长度最小的子数组。<br></code></pre></td></tr></table></figure><p>示例2：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：target = 4, nums = [1,4,4]<br>输出：1<br></code></pre></td></tr></table></figure><p>示例3：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：target = 11, nums = [1,1,1,1,1,1,1,1]<br>输出：0<br></code></pre></td></tr></table></figure><p>暴力解法是两个for循环，然后不断的寻找符合条件的子序列，时间复杂度很明显是O(n^2)。 这里我们采用<em><strong>滑动窗口</strong></em>的解法：</p><h3 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h3><p>在暴力的方法中，我们使用两个for循环，一个控制子数组的起始位置，一个控制子数组的终止位置，在滑动窗口的方法中，我们采用一个for循环来表示子数组的终止位置</p><p><a href="https://cloudimge.com/image/5Riv3"><img src="https://c2.im5i.com/2022/09/12/5Riv3.gif" alt="5Riv3.gif"></a></p><p>注意以下三点：</p><blockquote><p>滑动窗口即为满足其和 ≥ s的长度最小的连续子数组。 </p><p>窗口的起始位置如何移动：如果当前窗口的值大于s了，窗口就要向前移动了（也就是该缩小了）。 </p><p>窗口的结束位置如何移动：窗口的结束位置就是遍历数组的指针，也就是for循环里的索引。 </p></blockquote><p>具体代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><br></code></pre></td></tr></table></figure><p><img src="https://c2.im5i.com/2022/09/12/5RmUy.png" alt="5RmUy.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vue笔记</title>
     <link href="/2022/09/12/vue%E7%AC%94%E8%AE%B0/"/>
     <url>/2022/09/12/vue%E7%AC%94%E8%AE%B0/</url>
