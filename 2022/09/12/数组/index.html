@@ -25,8 +25,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://c2.im5i.com/2022/09/12/5Riv3.gif">
 <meta property="og:image" content="https://c2.im5i.com/2022/09/12/5RmUy.png">
+<meta property="og:image" content="https://c2.im5i.com/2022/09/12/5RxZO.png">
+<meta property="og:image" content="https://c2.im5i.com/2022/09/12/5Y1Qw.png">
 <meta property="article:published_time" content="2022-09-12T10:33:03.000Z">
-<meta property="article:modified_time" content="2022-09-12T10:47:22.885Z">
+<meta property="article:modified_time" content="2022-09-12T11:26:25.395Z">
 <meta property="article:author" content="Lsz">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://c2.im5i.com/2022/09/12/5Riv3.gif">
@@ -221,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          536 字
+          2.1k 字
         
       </span>
     
@@ -232,7 +234,7 @@
         
         
         
-          5 分钟
+          18 分钟
         
       </span>
     
@@ -277,13 +279,13 @@
                 
                 <h1 id="209-长度最小的子数组"><a href="#209-长度最小的子数组" class="headerlink" title="209.长度最小的子数组"></a>209.长度最小的子数组</h1><p>给定一个含有 n 个正整数的数组和一个正整数 target 。</p>
 <p>找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, …, numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。</p>
-<p>示例1：</p>
+<p><strong>示例1</strong>：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：target = 7, nums = [2,3,1,2,4,3]<br>输出：2<br>解释：子数组 [4,3] 是该条件下的长度最小的子数组。<br></code></pre></td></tr></table></figure>
 
-<p>示例2：</p>
+<p><strong>示例2：</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：target = 4, nums = [1,4,4]<br>输出：1<br></code></pre></td></tr></table></figure>
 
-<p>示例3：</p>
+<p><strong>示例3：</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：target = 11, nums = [1,1,1,1,1,1,1,1]<br>输出：0<br></code></pre></td></tr></table></figure>
 
 <p>暴力解法是两个for循环，然后不断的寻找符合条件的子序列，时间复杂度很明显是O(n^2)。 这里我们采用<em><strong>滑动窗口</strong></em>的解法：</p>
@@ -296,19 +298,21 @@
 <p>窗口的结束位置如何移动：窗口的结束位置就是遍历数组的指针，也就是for循环里的索引。 </p>
 </blockquote>
 <p>具体代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><br></code></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minSubArrayLen</span><span class="hljs-params">(<span class="hljs-type">int</span> target, vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-type">int</span> result = INT32_MAX;<br>        <span class="hljs-type">int</span> sum,i,j;<br>        i=j=sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> l=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(j=<span class="hljs-number">0</span>;j&lt;nums.<span class="hljs-built_in">size</span>();j++)&#123;<br>            sum += nums[j];<br>            <span class="hljs-keyword">while</span>(sum &gt;= target)&#123;<br>                l = j-i+<span class="hljs-number">1</span>;<br>                result = result &lt; l ? result:l;<br>                sum -= nums[i++];<br>            &#125;<br>        &#125;<br>        result = result &lt; INT32_MAX ? result:<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
 <p><img src="https://c2.im5i.com/2022/09/12/5RmUy.png" srcset="/img/loading.gif" lazyload alt="5RmUy.png"></p>
+<h2 id="59-螺旋矩阵II"><a href="#59-螺旋矩阵II" class="headerlink" title="59.螺旋矩阵II"></a>59.螺旋矩阵II</h2><p>给你一个正整数 <code>n</code> ，生成一个包含 <code>1</code> 到 <code>n2</code> 所有元素，且元素按顺时针顺序螺旋排列的 <code>n x n</code> 正方形矩阵 <code>matrix</code> 。 </p>
+<p><strong>示例1</strong>：</p>
+<p><img src="https://c2.im5i.com/2022/09/12/5RxZO.png" srcset="/img/loading.gif" lazyload alt="5RxZO.png"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：n = 3<br>输出：[[1,2,3],[8,9,4],[7,6,5]]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：n = 1<br>输出：[[1]]<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">generateMatrix</span>(<span class="hljs-type">int</span> n) &#123;<br>        vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">res</span>(n, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(n, <span class="hljs-number">0</span>)); <span class="hljs-comment">// 使用vector定义一个二维数组</span><br>        <span class="hljs-type">int</span> startx = <span class="hljs-number">0</span>, starty = <span class="hljs-number">0</span>; <span class="hljs-comment">// 定义每循环一个圈的起始位置</span><br>        <span class="hljs-type">int</span> loop = n / <span class="hljs-number">2</span>; <span class="hljs-comment">// 每个圈循环几次，例如n为奇数3，那么loop = 1 只是循环一圈，矩阵中间的值需要单独处理</span><br>        <span class="hljs-type">int</span> mid = n / <span class="hljs-number">2</span>; <span class="hljs-comment">// 矩阵中间的位置，例如：n为3， 中间的位置就是(1，1)，n为5，中间位置为(2, 2)</span><br>        <span class="hljs-type">int</span> count = <span class="hljs-number">1</span>; <span class="hljs-comment">// 用来给矩阵中每一个空格赋值</span><br>        <span class="hljs-type">int</span> offset = <span class="hljs-number">1</span>; <span class="hljs-comment">// 需要控制每一条边遍历的长度，每次循环右边界收缩一位</span><br>        <span class="hljs-type">int</span> i,j;<br>        <span class="hljs-keyword">while</span> (loop --) &#123;<br>            i = startx;<br>            j = starty;<br><br>            <span class="hljs-comment">// 下面开始的四个for就是模拟转了一圈</span><br>            <span class="hljs-comment">// 模拟填充上行从左到右(左闭右开)</span><br>            <span class="hljs-keyword">for</span> (j = starty; j &lt; n - offset; j++) &#123;<br>                res[startx][j] = count++;<br>            &#125;<br>            <span class="hljs-comment">// 模拟填充右列从上到下(左闭右开)</span><br>            <span class="hljs-keyword">for</span> (i = startx; i &lt; n - offset; i++) &#123;<br>                res[i][j] = count++;<br>            &#125;<br>            <span class="hljs-comment">// 模拟填充下行从右到左(左闭右开)</span><br>            <span class="hljs-keyword">for</span> (; j &gt; starty; j--) &#123;<br>                res[i][j] = count++;<br>            &#125;<br>            <span class="hljs-comment">// 模拟填充左列从下到上(左闭右开)</span><br>            <span class="hljs-keyword">for</span> (; i &gt; startx; i--) &#123;<br>                res[i][j] = count++;<br>            &#125;<br><br>            <span class="hljs-comment">// 第二圈开始的时候，起始位置要各自加1， 例如：第一圈起始位置是(0, 0)，第二圈起始位置是(1, 1)</span><br>            startx++;<br>            starty++;<br><br>            <span class="hljs-comment">// offset 控制每一圈里每一条边遍历的长度</span><br>            offset += <span class="hljs-number">1</span>;<br>        &#125;<br><br>        <span class="hljs-comment">// 如果n为奇数的话，需要单独给矩阵最中间的位置赋值</span><br>        <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span>) &#123;<br>            res[mid][mid] = count;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://c2.im5i.com/2022/09/12/5Y1Qw.png" srcset="/img/loading.gif" lazyload alt="5Y1Qw.png"></p>
+<p>以上图顺序，由外向内模拟，可以很好地处理边界条件。</p>
 
                 
               </div>
