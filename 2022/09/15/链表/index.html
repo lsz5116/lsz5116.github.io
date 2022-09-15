@@ -16,23 +16,23 @@
   <meta name="author" content="Lsz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="209.长度最小的子数组给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, …, numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。 示例1： 123输入：target &#x3D; 7, nums &#x3D; [2,3,1,2,4,3]输出：2解释：子数组 [4,3">
+    <meta name="description" content="1.定义1.1单链表​    链表是一种通过指针串联在一起的线性结构，每一个节点由两部分组成，一个是数据域一个是指针域（存放指向下一个节点的指针），最后一个节点的指针域指向null（空指针的意思）。链接的入口节点称为链表的头结点也就是head。如下图所示：  1.2双链表双链表：每一个节点有两个指针域，一个指向下一个节点，一个指向上一个节点。双链表既可以向前查询也可以向后查询。如下图所示：  1.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组">
-<meta property="og:url" content="http://example.com/2022/09/12/%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:title" content="链表">
+<meta property="og:url" content="http://example.com/2022/09/15/%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="蓟城风起的博客">
-<meta property="og:description" content="209.长度最小的子数组给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, …, numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。 示例1： 123输入：target &#x3D; 7, nums &#x3D; [2,3,1,2,4,3]输出：2解释：子数组 [4,3">
+<meta property="og:description" content="1.定义1.1单链表​    链表是一种通过指针串联在一起的线性结构，每一个节点由两部分组成，一个是数据域一个是指针域（存放指向下一个节点的指针），最后一个节点的指针域指向null（空指针的意思）。链接的入口节点称为链表的头结点也就是head。如下图所示：  1.2双链表双链表：每一个节点有两个指针域，一个指向下一个节点，一个指向上一个节点。双链表既可以向前查询也可以向后查询。如下图所示：  1.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://c2.im5i.com/2022/09/02/u0vxL.jpg">
-<meta property="article:published_time" content="2022-09-12T10:33:03.000Z">
-<meta property="article:modified_time" content="2022-09-12T13:01:28.778Z">
+<meta property="og:image" content="https://c2.im5i.com/2022/09/02/u0lSO.jpg">
+<meta property="article:published_time" content="2022-09-15T08:01:09.000Z">
+<meta property="article:modified_time" content="2022-09-15T09:32:57.044Z">
 <meta property="article:author" content="Lsz">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://c2.im5i.com/2022/09/02/u0vxL.jpg">
+<meta name="twitter:image" content="https://c2.im5i.com/2022/09/02/u0lSO.jpg">
   
   
   
-  <title>数组 - 蓟城风起的博客</title>
+  <title>链表 - 蓟城风起的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="数组"></span>
+            <span id="subtitle" data-typed-text="链表"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-12 18:33" pubdate>
-          2022年9月12日 晚上
+        <time datetime="2022-09-15 16:01" pubdate>
+          2022年9月15日 下午
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          1.8k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          18 分钟
+          16 分钟
         
       </span>
     
@@ -269,47 +269,43 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">数组</h1>
+            <h1 style="display: none">链表</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="209-长度最小的子数组"><a href="#209-长度最小的子数组" class="headerlink" title="209.长度最小的子数组"></a>209.长度最小的子数组</h1><p>给定一个含有 n 个正整数的数组和一个正整数 target 。</p>
-<p>找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, …, numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。</p>
-<p><strong>示例1</strong>：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：target = 7, nums = [2,3,1,2,4,3]<br>输出：2<br>解释：子数组 [4,3] 是该条件下的长度最小的子数组。<br></code></pre></td></tr></table></figure>
+                <h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><h4 id="1-1单链表"><a href="#1-1单链表" class="headerlink" title="1.1单链表"></a>1.1单链表</h4><p>​    链表是一种通过指针串联在一起的线性结构，每一个节点由两部分组成，一个是数据域一个是指针域（存放指向下一个节点的指针），最后一个节点的指针域指向null（空指针的意思）。链接的入口节点称为链表的头结点也就是head。如下图所示：</p>
+<p><img src="https://c2.im5i.com/2022/09/15/HCePj.png" srcset="/img/loading.gif" lazyload alt="HCePj.png"></p>
+<h4 id="1-2双链表"><a href="#1-2双链表" class="headerlink" title="1.2双链表"></a>1.2双链表</h4><p>双链表：每一个节点有两个指针域，一个指向下一个节点，一个指向上一个节点。双链表既可以向前查询也可以向后查询。如下图所示：</p>
+<p><img src="https://c2.im5i.com/2022/09/15/HCzTS.png" srcset="/img/loading.gif" lazyload alt="HCzTS.png"></p>
+<h4 id="1-3循环链表"><a href="#1-3循环链表" class="headerlink" title="1.3循环链表"></a>1.3循环链表</h4><p>顾名思义，就是链表首尾相连。 </p>
+<p><img src="https://c2.im5i.com/2022/09/15/HC0eL.png" srcset="/img/loading.gif" lazyload alt="HC0eL.png"></p>
+<h3 id="2-链表的存储方式"><a href="#2-链表的存储方式" class="headerlink" title="2.链表的存储方式"></a>2.链表的存储方式</h3><p>​    数组是在内存中是连续分布的，但是链表在内存中可不是连续分布的。链表是通过指针域的指针链接在内存中各个节点。所以链表中的节点在内存中不是连续分布的 ，而是散乱分布在内存中的某地址上，分配机制取决于操作系统的内存管理。</p>
+<h3 id="3-链表的定义"><a href="#3-链表的定义" class="headerlink" title="3.链表的定义"></a>3.链表的定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// 单链表</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">ListNode</span> &#123;<br>    <span class="hljs-type">int</span> val;  <span class="hljs-comment">// 节点上存储的元素</span><br>    ListNode *next;  <span class="hljs-comment">// 指向下一个节点的指针</span><br>    <span class="hljs-built_in">ListNode</span>(<span class="hljs-type">int</span> x) : <span class="hljs-built_in">val</span>(x), <span class="hljs-built_in">next</span>(<span class="hljs-literal">NULL</span>) &#123;&#125;  <span class="hljs-comment">// 节点的构造函数</span><br>&#125;;<br></code></pre></td></tr></table></figure>
 
-<p><strong>示例2：</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：target = 4, nums = [1,4,4]<br>输出：1<br></code></pre></td></tr></table></figure>
+<p>构造函数初始化节点： </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++">ListNode* head = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ListNode</span>(<span class="hljs-number">5</span>);<br></code></pre></td></tr></table></figure>
 
-<p><strong>示例3：</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：target = 11, nums = [1,1,1,1,1,1,1,1]<br>输出：0<br></code></pre></td></tr></table></figure>
-
-<p>暴力解法是两个for循环，然后不断的寻找符合条件的子序列，时间复杂度很明显是O(n^2)。 这里我们采用<em><strong>滑动窗口</strong></em>的解法：</p>
-<h3 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h3><p>在暴力的方法中，我们使用两个for循环，一个控制子数组的起始位置，一个控制子数组的终止位置，在滑动窗口的方法中，我们采用一个for循环来表示子数组的终止位置</p>
-<p><a target="_blank" rel="noopener" href="https://cloudimge.com/image/5Riv3"><img src="https://c2.im5i.com/2022/09/12/5Riv3.gif" srcset="/img/loading.gif" lazyload alt="5Riv3.gif"></a></p>
-<p>注意以下三点：</p>
-<blockquote>
-<p>滑动窗口即为满足其和 ≥ s的长度最小的连续子数组。 </p>
-<p>窗口的起始位置如何移动：如果当前窗口的值大于s了，窗口就要向前移动了（也就是该缩小了）。 </p>
-<p>窗口的结束位置如何移动：窗口的结束位置就是遍历数组的指针，也就是for循环里的索引。 </p>
-</blockquote>
-<p>具体代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minSubArrayLen</span><span class="hljs-params">(<span class="hljs-type">int</span> target, vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-type">int</span> result = INT32_MAX;<br>        <span class="hljs-type">int</span> sum,i,j;<br>        i=j=sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> l=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(j=<span class="hljs-number">0</span>;j&lt;nums.<span class="hljs-built_in">size</span>();j++)&#123;<br>            sum += nums[j];<br>            <span class="hljs-keyword">while</span>(sum &gt;= target)&#123;<br>                l = j-i+<span class="hljs-number">1</span>;<br>                result = result &lt; l ? result:l;<br>                sum -= nums[i++];<br>            &#125;<br>        &#125;<br>        result = result &lt; INT32_MAX ? result:<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://c2.im5i.com/2022/09/12/5RmUy.png" srcset="/img/loading.gif" lazyload alt="5RmUy.png"></p>
-<h2 id="59-螺旋矩阵II"><a href="#59-螺旋矩阵II" class="headerlink" title="59.螺旋矩阵II"></a>59.螺旋矩阵II</h2><p>给你一个正整数 <code>n</code> ，生成一个包含 <code>1</code> 到 <code>n2</code> 所有元素，且元素按顺时针顺序螺旋排列的 <code>n x n</code> 正方形矩阵 <code>matrix</code> 。 </p>
-<p><strong>示例1</strong>：</p>
-<p><img src="https://c2.im5i.com/2022/09/12/5RxZO.png" srcset="/img/loading.gif" lazyload alt="5RxZO.png"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：n = 3<br>输出：[[1,2,3],[8,9,4],[7,6,5]]<br></code></pre></td></tr></table></figure>
+<h3 id="4-链表的操作"><a href="#4-链表的操作" class="headerlink" title="4.链表的操作"></a>4.链表的操作</h3><h4 id="4-1删除节点"><a href="#4-1删除节点" class="headerlink" title="4.1删除节点"></a>4.1删除节点</h4><p><img src="https://c2.im5i.com/2022/09/15/HqhTR.png" srcset="/img/loading.gif" lazyload alt="HqhTR.png"></p>
+<p>删除D节点，只要将C节点的next指针指向E节点就可以了。在C++里最好是再手动释放这个D节点，释放这块内存。</p>
+<h4 id="4-2添加节点"><a href="#4-2添加节点" class="headerlink" title="4.2添加节点"></a>4.2添加节点</h4><p><img src="https://c2.im5i.com/2022/09/15/HqQPO.png" srcset="/img/loading.gif" lazyload alt="HqQPO.png"></p>
+<p>可以看出链表的增添和删除都是O(1)操作，也不会影响到其他节点。</p>
+<p>但是要注意，要是删除第五个节点，需要从头节点查找到第四个节点通过next指针进行删除操作，查找的时间复杂度是O(n)。</p>
+<h4 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203. 移除链表元素"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-linked-list-elements/">203. 移除链表元素</a></h4><p>给你一个链表的头节点 <code>head</code> 和一个整数 <code>val</code> ，请你删除链表中所有满足 <code>Node.val == val</code> 的节点，并返回 <strong>新的头节点</strong> 。 </p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++">输入：head = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">6</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>], val = <span class="hljs-number">6</span><br>输出：[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]<br></code></pre></td></tr></table></figure>
 
 <p><strong>示例 2：</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：n = 1<br>输出：[[1]]<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++">输入：head = [], val = <span class="hljs-number">1</span><br>输出：[]<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">generateMatrix</span>(<span class="hljs-type">int</span> n) &#123;<br>        vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">res</span>(n, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(n, <span class="hljs-number">0</span>)); <span class="hljs-comment">// 使用vector定义一个二维数组</span><br>        <span class="hljs-type">int</span> startx = <span class="hljs-number">0</span>, starty = <span class="hljs-number">0</span>; <span class="hljs-comment">// 定义每循环一个圈的起始位置</span><br>        <span class="hljs-type">int</span> loop = n / <span class="hljs-number">2</span>; <span class="hljs-comment">// 每个圈循环几次，例如n为奇数3，那么loop = 1 只是循环一圈，矩阵中间的值需要单独处理</span><br>        <span class="hljs-type">int</span> mid = n / <span class="hljs-number">2</span>; <span class="hljs-comment">// 矩阵中间的位置，例如：n为3， 中间的位置就是(1，1)，n为5，中间位置为(2, 2)</span><br>        <span class="hljs-type">int</span> count = <span class="hljs-number">1</span>; <span class="hljs-comment">// 用来给矩阵中每一个空格赋值</span><br>        <span class="hljs-type">int</span> offset = <span class="hljs-number">1</span>; <span class="hljs-comment">// 需要控制每一条边遍历的长度，每次循环右边界收缩一位</span><br>        <span class="hljs-type">int</span> i,j;<br>        <span class="hljs-keyword">while</span> (loop --) &#123;<br>            i = startx;<br>            j = starty;<br><br>            <span class="hljs-comment">// 下面开始的四个for就是模拟转了一圈</span><br>            <span class="hljs-comment">// 模拟填充上行从左到右(左闭右开)</span><br>            <span class="hljs-keyword">for</span> (j = starty; j &lt; n - offset; j++) &#123;<br>                res[startx][j] = count++;<br>            &#125;<br>            <span class="hljs-comment">// 模拟填充右列从上到下(左闭右开)</span><br>            <span class="hljs-keyword">for</span> (i = startx; i &lt; n - offset; i++) &#123;<br>                res[i][j] = count++;<br>            &#125;<br>            <span class="hljs-comment">// 模拟填充下行从右到左(左闭右开)</span><br>            <span class="hljs-keyword">for</span> (; j &gt; starty; j--) &#123;<br>                res[i][j] = count++;<br>            &#125;<br>            <span class="hljs-comment">// 模拟填充左列从下到上(左闭右开)</span><br>            <span class="hljs-keyword">for</span> (; i &gt; startx; i--) &#123;<br>                res[i][j] = count++;<br>            &#125;<br><br>            <span class="hljs-comment">// 第二圈开始的时候，起始位置要各自加1， 例如：第一圈起始位置是(0, 0)，第二圈起始位置是(1, 1)</span><br>            startx++;<br>            starty++;<br><br>            <span class="hljs-comment">// offset 控制每一圈里每一条边遍历的长度</span><br>            offset += <span class="hljs-number">1</span>;<br>        &#125;<br><br>        <span class="hljs-comment">// 如果n为奇数的话，需要单独给矩阵最中间的位置赋值</span><br>        <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span>) &#123;<br>            res[mid][mid] = count;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">输入：head = [7,7,7,7], val = 7<br>输出：[]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://c2.im5i.com/2022/09/12/5Y1Qw.png" srcset="/img/loading.gif" lazyload alt="5Y1Qw.png"></p>
-<p>以上图顺序，由外向内模拟，可以很好地处理边界条件。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">ListNode* <span class="hljs-title">removeElements</span><span class="hljs-params">(ListNode* head, <span class="hljs-type">int</span> val)</span> </span>&#123;<br>        <span class="hljs-comment">// 删除头结点</span><br>        <span class="hljs-keyword">while</span> (head != <span class="hljs-literal">NULL</span> &amp;&amp; head-&gt;val == val) &#123; <span class="hljs-comment">// 注意这里不是if</span><br>            ListNode* tmp = head;<br>            head = head-&gt;next;<br>            <span class="hljs-keyword">delete</span> tmp;<br>        &#125;<br><br>        <span class="hljs-comment">// 删除非头结点</span><br>        ListNode* cur = head;<br>        <span class="hljs-keyword">while</span> (cur != <span class="hljs-literal">NULL</span> &amp;&amp; cur-&gt;next!= <span class="hljs-literal">NULL</span>) &#123;<br>            <span class="hljs-keyword">if</span> (cur-&gt;next-&gt;val == val) &#123;<br>                ListNode* tmp = cur-&gt;next;<br>                cur-&gt;next = cur-&gt;next-&gt;next;<br>                <span class="hljs-keyword">delete</span> tmp;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                cur = cur-&gt;next;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> head;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>另外可以通过新建一个链表头将上面两种情况结合，具体如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">ListNode* <span class="hljs-title">removeElements</span><span class="hljs-params">(ListNode* head, <span class="hljs-type">int</span> val)</span> </span>&#123;<br>        ListNode* dummyHead = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ListNode</span>(<span class="hljs-number">0</span>); <span class="hljs-comment">// 设置一个虚拟头结点</span><br>        dummyHead-&gt;next = head; <span class="hljs-comment">// 将虚拟头结点指向head，这样方面后面做删除操作</span><br>        ListNode* cur = dummyHead;<br>        <span class="hljs-keyword">while</span> (cur-&gt;next != <span class="hljs-literal">NULL</span>) &#123;<br>            <span class="hljs-keyword">if</span>(cur-&gt;next-&gt;val == val) &#123;<br>                ListNode* tmp = cur-&gt;next;<br>                cur-&gt;next = cur-&gt;next-&gt;next;<br>                <span class="hljs-keyword">delete</span> tmp;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                cur = cur-&gt;next;<br>            &#125;<br>        &#125;<br>        head = dummyHead-&gt;next;<br>        <span class="hljs-keyword">delete</span> dummyHead;<br>        <span class="hljs-keyword">return</span> head;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -348,8 +344,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>数组</div>
-      <div>http://example.com/2022/09/12/数组/</div>
+      <div>链表</div>
+      <div>http://example.com/2022/09/15/链表/</div>
     </div>
     <div class="license-meta">
       
@@ -361,7 +357,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月12日</div>
+          <div>2022年9月15日</div>
         </div>
       
       
@@ -391,18 +387,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/15/%E9%93%BE%E8%A1%A8/" title="链表">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">链表</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/12/vue%E7%AC%94%E8%AE%B0/" title="vue笔记">
-                        <span class="hidden-mobile">vue笔记</span>
+                      <a href="/2022/09/12/%E6%95%B0%E7%BB%84/" title="数组">
+                        <span class="hidden-mobile">数组</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
