@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://c2.im5i.com/2022/09/02/u0lSO.jpg">
 <meta property="article:published_time" content="2022-09-12T05:21:42.000Z">
-<meta property="article:modified_time" content="2022-09-18T01:42:10.137Z">
+<meta property="article:modified_time" content="2022-09-18T02:45:14.534Z">
 <meta property="article:author" content="Lsz">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://c2.im5i.com/2022/09/02/u0lSO.jpg">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.5k 字
+          6.5k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          46 分钟
+          54 分钟
         
       </span>
     
@@ -363,6 +363,50 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-attr">data</span>: &#123;<br>                <span class="hljs-attr">plan</span>: <span class="hljs-string">&#x27;&#x27;</span>,<br>                <span class="hljs-attr">isSunny</span>: <span class="hljs-literal">true</span>,<br>                <span class="hljs-attr">number</span>:&#123;<br>                    <span class="hljs-attr">a</span>:<span class="hljs-number">1</span>,<br>                    <span class="hljs-attr">b</span>:<span class="hljs-number">2</span>,<br>                &#125;,<br>            &#125;,<br>            <span class="hljs-attr">watch</span>: &#123;<br>                <span class="hljs-string">&#x27;number.a&#x27;</span>:&#123;<br>                    <span class="hljs-title function_">handler</span>(<span class="hljs-params"></span>)&#123;<br>                    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;a change&#x27;</span>);<br>                    &#125;,<br>                 &#125;,<br>                 <span class="hljs-string">&#x27;number.b&#x27;</span>:&#123;<br>                    <span class="hljs-title function_">handler</span>(<span class="hljs-params"></span>)&#123;<br>                    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;b change&#x27;</span>);<br>                    &#125;,<br>                 &#125;,<br>            &#125;,<br></code></pre></td></tr></table></figure>
 
 <p>注意到：监测数据的某一属性时，要使用字符串形式如’number.a’</p>
+<h3 id="4-计算属性和监视属性异同"><a href="#4-计算属性和监视属性异同" class="headerlink" title="4.计算属性和监视属性异同"></a>4.计算属性和监视属性异同</h3><ul>
+<li><strong>通过监视属性实现姓名拼接</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-attr">watch</span>:&#123;<br>               <span class="hljs-title function_">firstname</span>(<span class="hljs-params">val</span>)&#123;<br>                   <span class="hljs-variable language_">this</span>.<span class="hljs-property">fullname</span> = val+<span class="hljs-string">&#x27;-&#x27;</span>+<span class="hljs-variable language_">this</span>.<span class="hljs-property">lastname</span>;<br>               &#125;,<br>               <span class="hljs-title function_">lastname</span>(<span class="hljs-params">val</span>)&#123;<br>                   <span class="hljs-variable language_">this</span>.<span class="hljs-property">fullname</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">firstname</span>+<span class="hljs-string">&#x27;-&#x27;</span>+<span class="hljs-variable language_">this</span>.<span class="hljs-property">lastname</span>;<br>               &#125;,<br>           &#125;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>异同</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>监视属性是命令式且重复的</li>
+<li>通过计算属性实现更加简介明了</li>
+<li>两者都能实现的，优先选择使用computed</li>
+<li>watch能实现异步调用，computed不能(setTimeout())</li>
+</ul>
+</blockquote>
+<h3 id="5-class样式的动态绑定"><a href="#5-class样式的动态绑定" class="headerlink" title="5.class样式的动态绑定"></a>5.class样式的动态绑定</h3><h5 id="字符串写法"><a href="#字符串写法" class="headerlink" title="字符串写法"></a>字符串写法</h5><ul>
+<li><p>使用场景：样式的类型不确定</p>
+</li>
+<li><p>写法如下：</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">&quot;xd_bg&quot;</span>&gt;</span>李阳<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>手动触发样式改变</p>
+<p>注意字符串使用的是vue实例data中的已有属性</p>
+<h5 id="对象写法"><a href="#对象写法" class="headerlink" title="对象写法"></a>对象写法</h5><ul>
+<li><p>使用场景：样式个数、类名确定，通过Boolean动态展示与否</p>
+</li>
+<li><p>对象写在内联样式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">&quot;&#123;bg_red:bg_red,border:border&#125;&quot;</span>&gt;</span>李阳<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li><p>对象写在data中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;div :<span class="hljs-keyword">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;李阳&lt;/div&gt;<br><br><span class="hljs-attr">data</span>: &#123;<br>  <span class="hljs-attr">list</span>: &#123;<br>    <span class="hljs-attr">bg_red</span>: <span class="hljs-string">&#x27;bg_red&#x27;</span>,<br>    <span class="hljs-attr">border</span>: <span class="hljs-string">&#x27;border&#x27;</span>,<br>  &#125;,<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="数组写法"><a href="#数组写法" class="headerlink" title="数组写法"></a>数组写法</h5><ul>
+<li><p>使用场景：需要绑定的样式个数不确定，类名也不确定</p>
+</li>
+<li><p>内联写法</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">&quot;[xd_border,xd_bg]&quot;</span>&gt;</span>李阳<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li><p>数组里加三元表达式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">&quot;[isActive?xd_border:&#x27;&#x27;,xd_bg]&quot;</span>&gt;</span>李阳<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>									<br></code></pre></td></tr></table></figure></li>
+<li><p>写在data中</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html"> <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>李阳<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><br>data:&#123;<br>	list:[&#x27;border&#x27;, &#x27;bg_red&#x27;]<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
 
                 
               </div>
