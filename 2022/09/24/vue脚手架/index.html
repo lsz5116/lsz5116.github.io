@@ -16,23 +16,23 @@
   <meta name="author" content="Lsz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.一个例子 文字大小动态变化 123&lt;div id&#x3D;&quot;app&quot;&gt;      &lt;div :style&#x3D;&quot;&amp;#123;fontSize:num+&amp;#x27;px&amp;#x27;,color:red&amp;#125;&quot;&gt;&amp;#123;&amp;#123;name&amp;#125;&amp;#125;&lt;&#x2F;div&gt;    &lt;&#x2F;div&gt;  1234567">
+    <meta name="description" content="Vue脚手架结构信息 node_modules 项目的安装依赖   public 放置静态资源文件   src 项目的主入口文件夹   .gitignore git版本管制的忽略的配置   babel.config.js ES6语法编译成ES5语法   package-lock.json 记录了当前项目所有模块的具体来源和版本号以及其他的信息   package.json 记录当前项目所依赖模块的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生命周期函数">
-<meta property="og:url" content="http://example.com/2022/09/19/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="vue脚手架">
+<meta property="og:url" content="http://example.com/2022/09/24/vue%E8%84%9A%E6%89%8B%E6%9E%B6/index.html">
 <meta property="og:site_name" content="蓟城风起的博客">
-<meta property="og:description" content="1.一个例子 文字大小动态变化 123&lt;div id&#x3D;&quot;app&quot;&gt;      &lt;div :style&#x3D;&quot;&amp;#123;fontSize:num+&amp;#x27;px&amp;#x27;,color:red&amp;#125;&quot;&gt;&amp;#123;&amp;#123;name&amp;#125;&amp;#125;&lt;&#x2F;div&gt;    &lt;&#x2F;div&gt;  1234567">
+<meta property="og:description" content="Vue脚手架结构信息 node_modules 项目的安装依赖   public 放置静态资源文件   src 项目的主入口文件夹   .gitignore git版本管制的忽略的配置   babel.config.js ES6语法编译成ES5语法   package-lock.json 记录了当前项目所有模块的具体来源和版本号以及其他的信息   package.json 记录当前项目所依赖模块的">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://c2.im5i.com/2022/09/02/u0y8d.jpg">
-<meta property="article:published_time" content="2022-09-19T12:25:15.000Z">
-<meta property="article:modified_time" content="2022-09-24T06:09:44.768Z">
+<meta property="article:published_time" content="2022-09-24T06:10:14.000Z">
+<meta property="article:modified_time" content="2022-09-24T08:02:45.268Z">
 <meta property="article:author" content="Lsz">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://c2.im5i.com/2022/09/02/u0y8d.jpg">
   
   
   
-  <title>生命周期函数 - 蓟城风起的博客</title>
+  <title>vue脚手架 - 蓟城风起的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="生命周期函数"></span>
+            <span id="subtitle" data-typed-text="vue脚手架"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-19 20:25" pubdate>
-          2022年9月19日 晚上
+        <time datetime="2022-09-24 14:10" pubdate>
+          2022年9月24日 下午
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          2.1k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          9 分钟
+          18 分钟
         
       </span>
     
@@ -269,66 +269,138 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">生命周期函数</h1>
+            <h1 style="display: none">vue脚手架</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="1-一个例子"><a href="#1-一个例子" class="headerlink" title="1.一个例子"></a>1.一个例子</h3><ul>
-<li><p>文字大小动态变化</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;<br>      <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">&quot;&#123;fontSize:num+&#x27;px&#x27;,color:red&#125;&quot;</span>&gt;</span>&#123;&#123;name&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>    &lt;/div&gt;<br></code></pre></td></tr></table></figure>
+                <h3 id="Vue脚手架结构信息"><a href="#Vue脚手架结构信息" class="headerlink" title="Vue脚手架结构信息"></a>Vue脚手架结构信息</h3><ul>
+<li><code>node_modules</code><ul>
+<li>项目的安装依赖</li>
+</ul>
+</li>
+<li><code>public</code><ul>
+<li>放置静态资源文件</li>
+</ul>
+</li>
+<li><code>src</code><ul>
+<li>项目的主入口文件夹</li>
+</ul>
+</li>
+<li><code>.gitignore</code><ul>
+<li>git版本管制的忽略的配置</li>
+</ul>
+</li>
+<li><code>babel.config.js</code><ul>
+<li>ES6语法编译成ES5语法</li>
+</ul>
+</li>
+<li><code>package-lock.json</code><ul>
+<li>记录了当前项目所有模块的具体来源和版本号以及其他的信息</li>
+</ul>
+</li>
+<li><code>package.json</code><ul>
+<li>记录当前项目所依赖模块的版本信息</li>
+</ul>
+</li>
+<li><code>README.md</code><ul>
+<li>项目说明文件</li>
+</ul>
+</li>
+</ul>
+<h3 id="vue初始项目文件"><a href="#vue初始项目文件" class="headerlink" title="vue初始项目文件"></a>vue初始项目文件</h3><p><strong>vue初始项目文件</strong></p>
+<ul>
+<li>执行启动命令后的文件执行</li>
+<li>main.js<ul>
+<li>整个项目的入口文件</li>
+<li>当前引入的是运行版的vue，没有模板解析器，所以是用的是render函数</li>
+</ul>
+</li>
+<li>App.vue<ul>
+<li>所有子组件的父组件</li>
+</ul>
+</li>
+</ul>
+<h3 id="Vue的配置文件修改"><a href="#Vue的配置文件修改" class="headerlink" title="Vue的配置文件修改"></a>Vue的配置文件修改</h3><p>配置文件</p>
+<ul>
+<li><p>查看vue脚手架的默认配置（修改不奏效）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vue inspect &gt; output.js<br></code></pre></td></tr></table></figure></li>
+<li><p>对脚手架进行设置</p>
+<p>新建 <code>vue.config.js</code> 文件设置</p>
+</li>
+</ul>
+<h3 id="Vue组件化编程"><a href="#Vue组件化编程" class="headerlink" title="Vue组件化编程"></a>Vue组件化编程</h3><ul>
+<li>没使用组件思想构建项目的缺点<ul>
+<li>代码关系混乱，不好维护</li>
+<li>代码复用率不高</li>
+</ul>
+</li>
+<li>模块<ul>
+<li>定义<ul>
+<li>一般指一个 <code>js</code> 文件，提取公共或逻辑复杂的 <code>js </code> 代码</li>
+</ul>
+</li>
+<li>作用<ul>
+<li>复用 <code>js</code> 代码、提高代码的复用率 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>模块化 <ul>
+<li>当项目中的 <code>js</code> 都用模块来编写，那这个项目就是模块化的</li>
+</ul>
+</li>
+<li>组件<ul>
+<li>定义<ul>
+<li>实现局部功能、逻辑的代码合集（html、css、js、image、map4）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组件化<ul>
+<li>当项目中的功能或者页面都以组件的形式来去编写，那么这个项目就是组件化的</li>
+</ul>
+</li>
+</ul>
+<h3 id="组件的全局注册与局部注册（html）"><a href="#组件的全局注册与局部注册（html）" class="headerlink" title="组件的全局注册与局部注册（html）"></a>组件的全局注册与局部注册（html）</h3><ul>
+<li><p>全局注册</p>
+<ul>
+<li><p>Vue.component</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">component</span>(<span class="hljs-string">&#x27;button-counter&#x27;</span>, &#123;<br>  <span class="hljs-title function_">data</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">return</span> &#123;<br>      <span class="hljs-attr">count</span>: <span class="hljs-number">0</span>,<br>    &#125;;<br>  &#125;,<br>  <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;&lt;button v-on:click=&quot;count++&quot;&gt;点击了 &#123;&#123; count &#125;&#125; 次&lt;/button&gt;&#x27;</span>,<br>&#125;);<br></code></pre></td></tr></table></figure></li>
+<li><p>组件名的两中写法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">button-counter<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;script&gt;<br>     <span class="hljs-title class_">Vue</span>.<span class="hljs-property">config</span>.<span class="hljs-property">productionTip</span> = <span class="hljs-literal">false</span>;<br>     <span class="hljs-keyword">let</span> vm = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Vue</span>(&#123;<br>       <span class="hljs-attr">el</span>: <span class="hljs-string">&#x27;#app&#x27;</span>,<br>       <span class="hljs-attr">data</span>: &#123;<br>         <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;小滴课堂&#x27;</span>,<br>         <span class="hljs-attr">num</span>: <span class="hljs-number">12</span>,<br>         <span class="hljs-attr">red</span>: <span class="hljs-string">&#x27;&#x27;</span>,<br>       &#125;,<br>       <span class="hljs-attr">methods</span>: &#123;<br>         <span class="hljs-title function_">change</span>(<span class="hljs-params"></span>) &#123;<br>           <span class="hljs-variable language_">this</span>.<span class="hljs-property">red</span> = <span class="hljs-string">&#x27;red&#x27;</span>;<br>         &#125;,<br>       &#125;,<br>       <span class="hljs-title function_">mounted</span>(<span class="hljs-params"></span>) &#123;<br>         <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">change</span>(); <span class="hljs-comment">//页面初始化时字体颜色即变红</span><br>         <span class="hljs-built_in">setInterval</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>           <span class="hljs-variable language_">this</span>.<span class="hljs-property">num</span> += <span class="hljs-number">0.4</span>;<br>           <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">num</span> &gt;= <span class="hljs-number">20</span>) &#123;<br>             <span class="hljs-variable language_">this</span>.<span class="hljs-property">num</span> = <span class="hljs-number">12</span>;<br>           &#125;<br>         &#125;, <span class="hljs-number">60</span>);<br>       &#125;,<br>     &#125;);<br>   &lt;/script&gt;<br></code></pre></td></tr></table></figure></li>
-<li><p><code>Mounted</code></p>
-<ul>
-<li>帮我们执行定时器、绑定事件、订阅消息等</li>
-<li>vue完成模板的解析后（把真实DOM放到页面，挂载完毕）再调用</li>
-</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">ButtonCounter</span>  <span class="hljs-comment">//此写法直接在DOM引用时，只有button-counter才能生效</span><br></code></pre></td></tr></table></figure></li>
+<li><p>组件的复用</p>
 </li>
-<li><p>生命周期</p>
-<ul>
-<li>通常也叫生命周期回调函数、生命周期函数、生命周期钩子</li>
-<li>vue初始化时在不同的阶段调用的不同函数</li>
-<li>生命周期函数的<code>this</code>指向为vue实例，名字不能更改</li>
-</ul>
+<li><p>data必须是个函数</p>
 </li>
-</ul>
-<h3 id="2-Vue的初始化流程"><a href="#2-Vue的初始化流程" class="headerlink" title="2.Vue的初始化流程"></a>2.Vue的初始化流程</h3><p><strong>Vue的更新流程整体如下图所示：</strong></p>
-<p><img src="https://c2.im5i.com/2022/09/19/HBscP.png" srcset="/img/loading.gif" lazyload alt="HBscP.png"></p>
-<blockquote>
-<ul>
-<li><p>生命周期函数</p>
-<ul>
-<li>创建前、创建后（beforeCreate、created）</li>
-<li>挂载前、挂载后（beforeMount、mounted）</li>
-<li>更新前、更新后（beforeUpdate、updated）</li>
-<li>销毁前、销毁后（beforeDestroy、destroyed）</li>
-</ul>
-</li>
-<li><p>常用的生命周期函数</p>
-<ul>
-<li>mounted<ul>
-<li>开启定时器</li>
-<li>发送ajax请求</li>
-<li>订阅消息</li>
-<li>绑定自定义事件</li>
-</ul>
-</li>
-<li>beforeDestroy<ul>
-<li>清除定时器</li>
-<li>取消订阅、事件监听</li>
-<li>解绑自定义事件</li>
-</ul>
+<li><p>不写el选项（实现组件可复用，一个项目中所有的组件最终都由一个vm实例管理）</p>
 </li>
 </ul>
 </li>
-</ul>
-</blockquote>
+<li><p>局部注册</p>
 <ul>
-<li>vue实例销毁<ul>
-<li>vue开发者工具的数据为空</li>
-<li>销毁后自定义事件失效</li>
-<li>不要在beforeDestroy进行数据的操作，不会再走更新流程</li>
+<li><p>Vue.extend</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> xd = <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">extend</span>(&#123;<br>  <span class="hljs-title function_">data</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">return</span> &#123;<br>      <span class="hljs-attr">count</span>: <span class="hljs-number">0</span>,<br>    &#125;;<br>  &#125;,<br>  <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;&lt;button v-on:click=&quot;count++&quot;&gt;点击了 &#123;&#123; count &#125;&#125; 次&lt;/button&gt;&#x27;</span>,<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Vue</span>(&#123;<br>  <span class="hljs-attr">el</span>: <span class="hljs-string">&#x27;#app&#x27;</span>,<br>  <span class="hljs-attr">data</span>: &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;小滴课堂&#x27;</span>,<br>  &#125;,<br>  <span class="hljs-attr">components</span>: &#123;<br>    xd,<br>  &#125;,<br>&#125;);<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>组件的嵌套</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> aa = <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">extend</span>(&#123;<br>      <span class="hljs-title function_">data</span>(<span class="hljs-params"></span>) &#123;<br>        <span class="hljs-keyword">return</span> &#123;<br>          <span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;小滴&#x27;</span>,<br>        &#125;;<br>      &#125;,<br>      <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;&lt;p&gt;&#123;&#123;text&#125;&#125;&lt;/p&gt;&#x27;</span>,<br>    &#125;);<br><br>    <span class="hljs-comment">// 局部注册</span><br>    <span class="hljs-keyword">const</span> xd = <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">extend</span>(&#123;<br>      <span class="hljs-title function_">data</span>(<span class="hljs-params"></span>) &#123;<br>        <span class="hljs-keyword">return</span> &#123; <span class="hljs-attr">count</span>: <span class="hljs-number">0</span> &#125;;<br>      &#125;,<br>      <span class="hljs-attr">template</span>: <span class="hljs-string">`&lt;div&gt;</span><br><span class="hljs-string">        &lt;button v-on:click=&quot;count++&quot;&gt;点击了 &#123;&#123; count &#125;&#125; 次&lt;/button&gt;</span><br><span class="hljs-string">        &lt;aa&gt;&lt;/aa&gt;		//此处进行组建的嵌套</span><br><span class="hljs-string">        &lt;/div&gt;`</span>,<br>      <span class="hljs-attr">components</span>: &#123;<br>        aa,<br>      &#125;,<br>    &#125;);<br></code></pre></td></tr></table></figure>
+
+<h3 id="Vue脚手架开发必备的单文件组件"><a href="#Vue脚手架开发必备的单文件组件" class="headerlink" title="Vue脚手架开发必备的单文件组件"></a>Vue脚手架开发必备的单文件组件</h3><ul>
+<li><p>单文件组件</p>
+<ul>
+<li><p>结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;div&gt;&#123;&#123; name &#125;&#125;&lt;/div&gt;<br>&lt;/template&gt;<br></code></pre></td></tr></table></figure></li>
+<li><p>交互</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;script&gt;<br>export default &#123;<br>  data() &#123;<br>    return &#123; name: &#x27;你好，小滴课堂&#x27; &#125;;<br>  &#125;,<br>&#125;;<br>&lt;/script&gt;<br></code></pre></td></tr></table></figure></li>
+<li><p>样式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;style&gt;<br>div &#123;<br>  color: red;<br>&#125;<br>&lt;/style&gt;<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -370,8 +442,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>生命周期函数</div>
-      <div>http://example.com/2022/09/19/生命周期函数/</div>
+      <div>vue脚手架</div>
+      <div>http://example.com/2022/09/24/vue脚手架/</div>
     </div>
     <div class="license-meta">
       
@@ -383,7 +455,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月19日</div>
+          <div>2022年9月24日</div>
         </div>
       
       
@@ -413,18 +485,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/24/vue%E8%84%9A%E6%89%8B%E6%9E%B6/" title="vue脚手架">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vue脚手架</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/15/%E9%93%BE%E8%A1%A8/" title="链表">
-                        <span class="hidden-mobile">链表</span>
+                      <a href="/2022/09/19/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0/" title="生命周期函数">
+                        <span class="hidden-mobile">生命周期函数</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
